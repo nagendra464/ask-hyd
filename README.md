@@ -1,15 +1,47 @@
-# simple-java-maven-app
+# Java Sample Code for the Authorize.Net SDK
+[![Travis CI Status](https://travis-ci.org/AuthorizeNet/sample-code-java.svg?branch=master)](https://travis-ci.org/AuthorizeNet/sample-code-java)
 
-This repository is for the
-[Build a Java app with Maven](https://jenkins.io/doc/tutorials/build-a-java-app-with-maven/)
-tutorial in the [Jenkins User Documentation](https://jenkins.io/doc/).
+This repository contains working code samples which demonstrate Java integration with the [Authorize.Net Java SDK](https://www.github.com/AuthorizeNet/sdk-java).
 
-The repository contains a simple Java application which outputs the string
-"Hello world!" and is accompanied by a couple of unit tests to check that the
-main application works as expected. The results of these tests are saved to a
-JUnit XML report.
+The samples are organized into categories and common usage examples, just like our [API Reference Guide](http://developer.authorize.net/api/reference). Our API Reference Guide is an interactive reference for the Authorize.Net API. It explains the request and response parameters for each API method and has embedded code windows to allow you to send actual requests right within the API Reference Guide.
 
-The `jenkins` directory contains an example of the `Jenkinsfile` (i.e. Pipeline)
-you'll be creating yourself during the tutorial and the `scripts` subdirectory
-contains a shell script with commands that are executed when Jenkins processes
-the "Deliver" stage of your Pipeline.
+
+## Using the Sample Code
+
+The samples are all completely independent and self-contained. You can analyze them to get an understanding of how a particular method works, or you can use the snippets as a starting point for your own project.
+
+You can also run each sample directly from the command line.
+
+## Running the Samples From the Command Line
+* Clone this repository:
+```
+    $ git clone https://github.com/AuthorizeNet/sample-code-java.git
+```
+* Run "mvn package" in the root directory to create the SampleCode console app.
+* Run the individual samples by name. For example:
+```
+     > java -jar target/SampleCode.jar [CodeSampleName]
+```
+e.g.
+```
+     > java -jar target/SampleCode.jar ChargeCreditCard
+```
+Running SampleCode without a parameter will give you the list of sample names.
+
+**NOTE : You can update to your Sandbox credentials in SampleCode.java**
+
+**For using behind proxy**
+
+Please set the JAVA environment proxy using a similar code :
+```
+    System.setProperty(Constants.HTTPS_USE_PROXY, "true");
+    System.setProperty(Constants.HTTPS_PROXY_HOST, "127.0.0.1");
+    System.setProperty(Constants.HTTPS_PROXY_PORT, "8888");
+```
+**For using proxy authentication**
+
+Please set the JAVA environment proxy credentials using a similar code :
+```
+    System.setProperty(Constants.HTTPS_PROXY_USERNAME, "exampleUsername");
+    System.setProperty(Constants.HTTPS_PROXY_PASSWORD, "examplePassword");
+```
