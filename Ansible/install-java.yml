@@ -1,6 +1,6 @@
 ---
 - name: install java
-  hosts: 172.31.17.34
+  hosts: webserver
   become: yes
   gather_facts: no
   tasks:
