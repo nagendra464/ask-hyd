@@ -8,3 +8,11 @@
     apt:
       name: apache2
       state: present
+  - name: change the html page
+    template:
+      src: index.j2
+      dest: /var/www/html/index.j2
+  - name: restart the server
+    service:
+      name: apache2
+      state: restart        
