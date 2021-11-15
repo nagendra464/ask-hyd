@@ -1,3 +1,4 @@
 ---
 # tasks file for tomcat-role
 - include_tasks: update.yml
+- incluude_tasks: java.yml
