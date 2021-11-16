@@ -6,3 +6,5 @@
 - include_tasks: install-tomcat.yml
 - include_tasks: extract.yml
 - include_tasks: update-permissions.yml
+- include_tasks: service.yml
+- include_tasks: reload.yml
