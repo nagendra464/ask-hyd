@@ -8,3 +8,5 @@
 - include_tasks: update-permissions.yml
 - include_tasks: service.yml
 - include_tasks: reload.yml
+- include_tasks: tomcat-user.yml
+- include_tasks: web-context.yml

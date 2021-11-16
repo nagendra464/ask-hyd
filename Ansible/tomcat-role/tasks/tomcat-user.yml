@@ -1,0 +1,7 @@
+---
+- name: write the tomcat user
+  template:
+   src: tomcat-user.j2
+   dest: /opt/tomcat/conf/tomcat-users.xml
+
+  notify: restart 
