@@ -4,12 +4,12 @@ pipeline{
     stages {
         stage ('clone the code'){
             steps {
-                sh 'https://github.com/nagendra464/ask-hyd.git'
+                sh 'git clone https://github.com/nagendra464/ask-hyd.git'
             }
         }
         stage ('maven'){
             steps {
-                sh 'clean install'
+                sh 'mvn clean install'
             }
         }
     }
