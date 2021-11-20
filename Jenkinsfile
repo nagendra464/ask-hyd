@@ -7,5 +7,10 @@ pipeline{
                 sh 'https://github.com/nagendra464/ask-hyd.git'
             }
         }
+        stage ('maven'){
+            steps {
+                sh 'clean install'
+            }
+        }
     }
 }
