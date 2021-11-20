@@ -1,4 +1,4 @@
-# Declarlative pipeline
+// Declarlative pipeline
 pipeline{
     agent 'Docker'
     stages {
