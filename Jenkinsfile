@@ -14,7 +14,7 @@ pipeline{
         }
         stage ('build docker image'){
             steps { 
-                sh 'docker build -t nagendra464/tom-deploy:latest'
+                sh 'docker build -t nagendra464/tom-deploy:latest .'
             }
         }
     }
