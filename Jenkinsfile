@@ -1,6 +1,6 @@
 // Declarlative pipeline
 pipeline{
-    agent {'Docker'}
+    agent { node { label 'Docker'} }
     stages {
         stage ('clone the code'){
             steps {
